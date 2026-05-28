@@ -1,0 +1,16 @@
+[build-system]
+requires = ["scikit-build-core>=0.10"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "tgbm"
+version = "1.0.0"
+description = "Gradient Boosting with Ternary Branching"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.20", "scikit-learn>=1.6"]
+
+[tool.scikit-build]
+cmake.version = ">=3.15"
+cmake.args = ["-G", "MinGW Makefiles"]
+wheel.packages = ["tgbm"]
